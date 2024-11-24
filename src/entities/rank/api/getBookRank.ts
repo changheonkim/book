@@ -1,12 +1,11 @@
-import api from "@/src/applications/api"
+import apiClient from "@/src/applications/api";
 
-import { getBookRankParamsType } from "../types/getBookRank.type"
+import { GetBookRankParamsType } from "../types/api/getBookRank.type"
 
-function getBookRank(params: getBookRankParamsType) {
-    const response = api.get('/api/loanItemSrch', { params });
-    response.then(res => {
-        console.log(res);
-    })
+function getBookRank(params: GetBookRankParamsType) {
+    const response = apiClient.get('/api/loanItemSrch', { params });
+
+    return response;
 }
 
 export default getBookRank;

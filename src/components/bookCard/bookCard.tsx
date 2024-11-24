@@ -1,7 +1,9 @@
 import { BookCardWrapper } from "./bookCard.styled";
 
-export default function BookCard() {
+import { BookCardProps } from "./bookCard.type";
+
+export default function BookCard(props: BookCardProps) {
     return (
-        <BookCardWrapper>book</BookCardWrapper>
+        <BookCardWrapper>{props.doc.bookname}</BookCardWrapper>
     );
 }

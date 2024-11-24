@@ -1,0 +1,1 @@
+export { default } from './getBookRank';   // API 호출 함수들
