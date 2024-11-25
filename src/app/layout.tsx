@@ -1,16 +1,17 @@
 "use client"
+import Layout from "../widgets/layout";
 
-import { RecoilRoot } from 'recoil';
-import { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body>
-        <RecoilRoot>
-          {children}
-        </RecoilRoot>
-      </body>
+      <Layout>
+        {children}
+      </Layout>
     </html>
   );
 }

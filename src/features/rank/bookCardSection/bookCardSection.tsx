@@ -6,7 +6,6 @@ import BookCard from "@/src/components/bookCard"
 
 import getBookRank from "@/src/entities/rank/api/getBookRank";
 
-
 export default function BookCardSection() {
     const [rankBook, setRankBook] = useState([]);
     useEffect(() => {
@@ -24,8 +23,8 @@ export default function BookCardSection() {
     }, []);
 
     return (<BookCardWrapper>
-        {rankBook.map((book, index) => (
-            <BookCard doc={book.doc} key={index} />
+        {rankBook.map((book: { doc: any }, index) => (
+            <BookCard doc={book?.doc} key={index} />
         ))}
     </BookCardWrapper>);
 }
