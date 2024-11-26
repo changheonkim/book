@@ -25,10 +25,17 @@ export const DescriptWrapper = styled.div`
 export const BookTitleWrapper = styled.div`
     display: flex;
     gap: 4px;
-    margin-bottom: 16px;
+    flex-direction: column;
+    margin-bottom: 8px;
 `
 
-export const BookTitle = styled.h1`
+export const BookRank = styled.span`
+    font-size: 24px;
+    color: #6594e7;
+    font-weight: bold;
+`
+
+export const BookTitle = styled.h2`
     font-size: 18px
 `
 
@@ -36,5 +43,5 @@ export const BookDescribeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
-
+    color: #999;
 `
